@@ -1,3 +1,12 @@
+/* 
+  / 0 % 4 = 0 + 1 => 1
+  / 1 % 4 = 0 + 1 => 2
+  / 2 % 4 = 0 + 1 => 3 
+  / 3 % 4 = 0 + 1 => 4
+  / 4 % 4 = 0 + 1 => 1
+
+  1 2 3 4 and we go back to 1 
+*/
 import { useState, useRef, useEffect } from "react";
 import Button from "./Button";
 import { TiLocationArrow } from "react-icons/ti";
@@ -20,15 +29,6 @@ const Hero = () => {
     setloadedVideos((prev) => prev + 1);
   };
 
-  /* 
-    / 0 % 4 = 0 + 1 => 1
-    / 1 % 4 = 0 + 1 => 2
-    / 2 % 4 = 0 + 1 => 3 
-    / 3 % 4 = 0 + 1 => 4
-    / 4 % 4 = 0 + 1 => 1
-
-    1 2 3 4 and we go back to 1 
-  */
   const upcomingVideoIndex = (currentIndex % totalVideos) + 1;
 
   const handleMiniVdClick = () => {
